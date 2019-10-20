@@ -18,16 +18,17 @@ int main(){
 	horas = tiempo % 24;
 
 	
-		cout<<"\n\tTardaras aproximadamente "<<dias<<" dias y "<<horas<<" horas   "<<endl;
-		cout<<"\n\tPulsa enter para continuar, cualquier otra cosa para salir"; 
+	cout<<"\n\tTardaras aproximadamente "<<dias<<" dias y "<<horas<<" horas   "<<endl;
+	cout<<"\n\tPulsa enter para continuar, cualquier otra cosa para salir"; 
 
 	continuar = getch(); //obtener la tecla ENTER para continuar
-		if(continuar==13){
-			system("cls");
+	
+	if(continuar==13){
+		system("cls");
 	}	
 		else{ //en caso de no ser ENTER, cerrar el programa
 			break;
-			}
 	}
+}
 return 0;
 }
