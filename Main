@@ -6,29 +6,34 @@
 using namespace std;
 
 int main(){
-	int capitulos,horas,dias,tiempo,continuar;
+	int capitulos;
+	int horas;
+	int dias;
+	float tiempo;
+	int minutos;
+	int continuar;
 
-	while(1){
+	while (1) {
+		cout<<"\n\tPara poder calcular el tiempo, se ha estipulado una media de aproximadamente 25 minutos por capitulo";
+		cout<<"\n\n\tintroduzca la cantidad de capitulos de anime para ver: "; 
+		cin>>capitulos;
 	
-	cout<<"\n\n\tintroduzca la cantidad de capitulos de anime para ver: "; 
-	cin>>capitulos;
+		minutos = capitulos * 25;
+		horas = minutos / 60;
+		dias = horas / 24;
+		minutos = (minutos % 60);
+		horas = horas % 24;
 	
-	tiempo = (capitulos * 25) / 60;
-	dias = tiempo / 24;
-	horas = tiempo % 24;
+		cout<<"\n\tTardaras aproximadamente "<<dias<<" dias, "<<horas<<" horas y "<<minutos<<" minutos."<<endl;
+		cout<<"\n\tPulsa enter para continuar, cualquier otra cosa para salir"; 
 
-	
-	cout<<"\n\tTardaras aproximadamente "<<dias<<" dias y "<<horas<<" horas   "<<endl;
-	cout<<"\n\tPulsa enter para continuar, cualquier otra cosa para salir"; 
-
-	continuar = getch(); //obtener la tecla ENTER para continuar
-	
-	if(continuar==13){
-		system("cls");
-	}	
-		else{ //en caso de no ser ENTER, cerrar el programa
+		continuar = getch(); //obtener la tecla ENTER para continuar
+		
+		if (continuar==13) {
+			system("cls");
+		} else { //en caso de no ser ENTER, cerrar el programa
 			break;
+		}
 	}
-}
-return 0;
+	return 0;
 }
